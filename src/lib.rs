@@ -78,6 +78,14 @@ mod tests {
         needs.insert("model".to_string(), "tts-1".to_string());
         needs.insert("voice".to_string(), "echo".to_string());
         needs.insert("speed".to_string(), "1".to_string());
+        needs.insert(
+            "requestPath".to_string(),
+            "https://apic.ohmygpt.com".to_string(),
+        );
+        needs.insert("OpenAIKey".to_string(), "OpenAIKey".to_string());
+        needs.insert("model".to_string(), "tts-1".to_string());
+        needs.insert("voice".to_string(), "echo".to_string());
+        needs.insert("speed".to_string(), "1".to_string());
         let result = tts("你好", "zh", needs).unwrap();
         println!("{result}");
     }
