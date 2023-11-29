@@ -1,10 +1,48 @@
 {
-  "id": "[plugin].com.pot-app.lingva_tts",
+  "id": "[plugin].com.pot-app.openai_tts",
   "plugin_type": "tts",
-  "icon": "lingva.svg",
-  "display": "Lingva",
-  "homepage": "https://github.com/pot-app/pot-app-tts-plugin-template",
-  "needs": [{ "key": "requestPath", "display": "请求地址" }],
+  "icon": "openai.svg",
+  "display": "OpenAI TTS",
+  "homepage": "https://github.com/Rockytkg/pot-app-tts-plugin-openai",
+  "needs": [
+    {
+      "key": "requestPath",
+      "display": "请求地址",
+      "type": "input"
+    },
+    {
+      "key": "OpenAIKey",
+      "display": "OpenAIKey",
+      "type": "input"
+    },
+    {
+      "key": "model",
+      "display": "模型",
+      "type": "select",
+      "options": {
+        "tts-1": "tts-1",
+        "tts-1-hd": "tts-1-hd"
+      }
+    },
+    {
+      "key": "voice",
+      "display": "OpenAISecret",
+      "type": "select",
+      "options": {
+        "alloy": "alloy",
+        "echo": "echo",
+        "fable": "fable",
+        "onyx": "onyx",
+        "nova": "nova",
+        "shimmer": "shimmer"
+      }
+    },
+    {
+      "key":"speed",
+      "display":"语速(范围：[0.25, 4.0])",
+      "type":"input"
+    }
+  ],
   "language": {
     "zh_cn": "zh",
     "zh_tw": "zh_HANT",
